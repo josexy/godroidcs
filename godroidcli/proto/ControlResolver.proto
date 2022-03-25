@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package protobuf;
+option go_package = "./protobuf";
+import "proto/Message.proto";
+
+option java_multiple_files = true;
+option java_package = "com.joxrays.godroidsvr.resolver";
+option java_outer_classname = "ControlResolverEntry";
+
+service ControlResolver {
+  rpc GetScreenBrightness(Empty) returns (Integer) {}
+  rpc SetScreenBrightness(Integer) returns (Empty) {}
+  rpc GetScreenBrightnessMode(Empty) returns (Integer) {}
+  rpc SetScreenBrightnessMode(Boolean) returns (Empty) {}
+  rpc GetClipboardText(Empty) returns (String) {}
+  rpc SetClipboardText(String) returns (Empty) {}
+  rpc GetVolume(Empty) returns (Integer) {}
+  rpc SetVolume(Integer) returns (Empty) {}
+  rpc IncreaseVolume(Empty) returns (Empty) {}
+  rpc DecreaseVolume(Empty) returns (Empty) {}
+  rpc StartScreenCapture(Empty) returns (Empty) {}
+  rpc StopScreenCapture(Empty) returns (Empty) {}
+  rpc StartScreenRecord(Empty) returns (Empty) {}
+  rpc StopScreenRecord(Empty) returns (String) {}
+}

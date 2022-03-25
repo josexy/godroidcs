@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package protobuf;
+option go_package = "./protobuf";
+import "proto/Message.proto";
+
+option java_multiple_files = true;
+option java_package = "com.joxrays.godroidsvr.resolver";
+option java_outer_classname = "PmResolverEntry";
+
+service PmResolver {
+  rpc GetAllPackageInfo(Empty) returns (PackageMetaInfoList) {}
+  rpc GetAllUserPackageInfo(Empty) returns (PackageMetaInfoList) {}
+  rpc GetAllSystemPackageInfo(Empty) returns (PackageMetaInfoList) {}
+  rpc GetApplicationInfo(String) returns (ApplicationInfo) {}
+  rpc GetPackageInfo(String) returns (PackageInfo) {}
+  rpc GetApplicationSize(String) returns (AppSize) {}
+  rpc UninstallApk(String) returns (Empty) {}
+  rpc InstallApk(stream ParamBytes) returns (Status) {}
+  rpc GetApk(String) returns (String) {}
+  rpc GetIcon(String) returns (stream Bytes) {}
+  rpc GetPermissions(String) returns (StringList) {}
+  rpc GetActivities(String) returns (StringList) {}
+  rpc GetServices(String) returns (StringList) {}
+  rpc GetReceivers(String) returns (StringList) {}
+  rpc GetSharedLibFiles(String) returns (StringList) {}
+  rpc GetProviders(String) returns (StringList) {}
+}

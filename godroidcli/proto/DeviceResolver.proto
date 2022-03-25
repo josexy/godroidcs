@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package protobuf;
+option go_package = "./protobuf";
+import "proto/Message.proto";
+
+option java_multiple_files = true;
+option java_package = "com.joxrays.godroidsvr.resolver";
+option java_outer_classname = "DeviceResolverEntry";
+
+service DeviceResolver {
+  rpc GetDeviceInfo(Empty) returns (DeviceInfo) {}
+  rpc GetMemoryInfo(Empty) returns (MemoryInfo) {}
+  rpc GetStorageSpaceInfo(Empty) returns (StorageSpaceInfo) {}
+  rpc GetSystemInfo(Empty) returns (SystemInfo) {}
+  rpc GetDisplayInfo(Empty) returns (DisplayInfo) {}
+  rpc GetLocationInfo(Empty) returns (LocationInfo) {}
+  rpc GetBatteryInfo(Empty) returns (BatteryInfo) {}
+  rpc GetCPUsFrequency(Empty) returns (IntegerList) {}
+  rpc GetGPUInfo(Empty) returns (GPUInfo) {}
+}

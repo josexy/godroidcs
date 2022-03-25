@@ -1,0 +1,351 @@
+syntax = "proto3";
+
+package protobuf;
+
+option go_package = "./protobuf";
+
+option java_multiple_files = true;
+option java_package = "com.joxrays.godroidsvr.message";
+option java_outer_classname = "MessageEntry";
+
+message Empty {}
+
+message Integer { int32 value = 1; }
+
+message IntegerList { repeated int32 values = 1; }
+
+message Boolean { bool value = 1; }
+
+message String { string value = 1; }
+
+message StringPair {
+  string first = 1;
+  string second = 2;
+}
+
+message StringTuple {
+  string first = 1;
+  string second = 2;
+  string third = 3;
+}
+
+message StringBoolean {
+  string first = 1;
+  bool second = 2;
+}
+
+message StringList { repeated string values = 1; }
+
+message Bytes { bytes value = 1; }
+
+message ParamBytes {
+  String param = 1;
+  Bytes value = 2;
+}
+
+message ApplicationInfo {
+  string app_name = 1;     // YouTube Music
+  string data_dir = 2;     // /data/user/0/com.google.android.apps.youtube.music
+  string process_name = 3; // com.google.android.apps.youtube.music
+  string source_dir = 4;
+  bool system_app = 5;          // true
+  int32 min_sdk_version = 6;    // 21
+  int32 target_sdk_version = 7; // 31
+}
+
+message PackageInfo {
+  string package_name = 1;              // com.google.android.apps.youtube.music
+  string version_name = 2;              // 4.55.55
+  int64 first_install_time = 3;         // 2009-01-01 08:00:00
+  int64 last_updated_time = 4;          // 2021-12-08 20:56:34
+  ApplicationInfo application_info = 5; // application information
+  string installer = 6;                 // com.android.vending
+}
+
+message PackageMetaInfo {
+  string package_name = 1; // com.google.android.apps.youtube.music
+  string version_name = 2; // 4.55.55
+  string app_name = 3;     // YouTube Music
+  bool system_app = 4;     // true
+}
+
+message PackageMetaInfoList { repeated PackageMetaInfo values = 1; }
+
+message DeviceInfo {
+  string manufacturer = 1; // Google
+  string product = 2;      // sdk_gphone_arm64
+  string brand = 3;        // google
+  string model = 4;        // sdk_gphone_arm64
+  string board = 5;        // goldfish_arm64
+  string device_name = 6;  // emulator_arm64
+  string fingerprint = 7;  //
+  string hardware = 8;     // ranchu
+  string android_id = 9;   // 78dd45c72464d5de
+  bool root = 10;          // false
+  bool adb = 11;           // true
+  bool sim_card = 12;      // true
+  bool developer = 13;     // true
+  bool airplane = 14;      // false
+  bool bluetooth = 15;     // false
+  bool location = 16;      // true
+  int64 build_time = 17;   // 2021-08-03 01:49:27
+}
+
+message SystemInfo {
+  string host = 1;            // abfarm-01164
+  string display = 2;         // RSR1.210722.003
+  string user = 3;            // android-build
+  string release_version = 4; // 11
+  int32 sdk = 5;              // 30
+  string language = 6;        // en
+  string abi = 7;             // arm64-v8a
+  string kernel_release = 8; // 5.4.86-android11-2-00040-g29b2beadc627-ab7157994
+  string kernel_version = 9; // #1 SMP PREEMPT Fri Feb 19 11:59:46 UTC 2021
+  int64 uptime = 10;         // 0:10:2
+  int32 mcc = 11;            // 310
+  int32 mnc = 12;            // 260
+}
+
+message DisplayInfo {
+  int32 height = 1;                  // 2088
+  int32 width = 2;                   // 1080
+  float density = 3;                 // 2.75
+  float refresh_rate = 4;            // 60.00Hz
+  int32 screen_off_time = 5;         // 2147483s
+  int32 screen_brightness = 6;       // 31
+  string screen_brightness_mode = 7; // Manual
+  bool support_hdr = 8;              // false
+  string hdr_capabilities = 9;       //
+  float font_scale = 10;             // 1.00
+  int32 density_dpi = 11;            // 440
+  string orientation = 12;           // Portrait
+  bool touch_screen = 13;            // true
+}
+
+message BatteryInfo {
+  string status = 1;     // Discharging
+  string health = 2;     // Good
+  bool present = 3;      // true
+  int32 level = 4;       // 70%
+  int32 scale = 5;       // 100%
+  int32 voltage = 6;     // 5000mV
+  int32 temperature = 7; // 25.0°C
+  string technology = 8; // Li-ion
+  string plugged = 9;    // AC
+}
+
+message LocationInfo {
+  double longitude = 1;    // -122.08
+  double latitude = 2;     // 37.42
+  string country_name = 3; // United States
+  string country_code = 4; // US
+  string admin_area = 5;   // California
+  string locality = 6;     // Mountain View
+  string sub_locality = 7; //
+  string address_line = 8; // Amphitheatre Pkwy, Mountain View, CA 94043, USA
+}
+
+message GPUInfo {
+  string renderer = 1; // Android Emulator OpenGL ES Translator (Apple M1)
+  string vendor = 2;   // Google (Apple)
+  string version = 3;  // OpenGL ES-CM 1.1 (4.1 Metal - 76.1)
+}
+
+message SimpleWifiInfo {
+  string ssid = 1;     // AndroidWifi
+  string bssid = 2;    // 02:15:b2:00:01:00
+  int32 frequency = 3; // 2.45GHz
+  string signal = 4;   // Excellent
+}
+
+message ScanWifiInfoList {
+  bool empty = 1;
+  repeated SimpleWifiInfo values = 2;
+}
+
+message DetailWifiInfo {
+  string ssid = 1;           // AndroidWifi
+  string bssid = 2;          // 02:15:b2:00:01:00
+  string ip = 3;             // 10.0.2.16
+  string mac = 4;            // 02:00:00:00:00:00
+  string gateway = 5;        // 10.0.2.2
+  string netmask = 6;        // 0.0.0.0
+  string server_address = 7; // 10.0.2.2
+  string dns1 = 8;           // 10.0.2.3
+  string dns2 = 9;           // 0.0.0.0
+  int32 frequency = 10;      // 2.45GHz
+  int32 network_id = 11;     // 0
+  string signal = 12;        // Excellent
+  int32 link_speed = 13;     // 19Mbps
+  int32 tx_speed = 14;       // 19Mbps
+  int32 rx_speed = 15;       // 19Mbps
+  string status = 16;        // Enabled
+}
+
+message ProxyInfo {
+  string pac = 1;
+  string host = 2;
+  int32 port = 3;
+}
+
+message DetailActiveNetworkInfo {
+  string name = 1;      // wlan0
+  int32 mtu = 2;        // 0
+  ProxyInfo proxy = 3;  //
+  string ip = 4;        // 10.0.2.16
+  string dns = 5;       // 10.0.2.3
+  string signal = 6;    // Excellent
+  bool has_network = 7; // true
+  string type = 8;      // WIFI
+}
+
+message DetailActiveNetworkInfoList {
+  repeated DetailActiveNetworkInfo values = 1;
+}
+
+message InetAddr {
+  bool ipv4 = 1;           // true
+  string ip = 2;           // 10.0.2.15
+  string broadcast_ip = 3; // 10.0.2.255
+  int32 prefix_length = 4; // 24
+}
+
+message NetInterfaceInfo {
+  bool up = 1;                      // true
+  string name = 2;                  // radio0
+  int32 mtu = 3;                    // 1500
+  string mac_address = 4;           //
+  repeated InetAddr inet_addrs = 5; //
+}
+
+message NetInterfaceInfoList { repeated NetInterfaceInfo values = 1; }
+
+message PublicNetworkInfo {
+  string ip = 1;       // xx.xx.xx.xx
+  string city = 2;     // JP
+  string region = 3;   // Tokyo
+  string country = 4;  // Tokyo
+  string location = 5; //
+  string isp = 6;      // AS16509 Amazon.com, Inc.
+  string timezone = 7; // Asia/Tokyo
+  string hostname = 8; //
+}
+
+message StorageSpaceInfo {
+  int64 free_size = 1;  // 3.20GB
+  int64 used_size = 2;  // 4.80GB
+  int64 total_size = 3; // 8.00GB
+}
+
+message AppSize {
+  int64 app_bytes = 1;   // 40.48MB
+  int64 cache_bytes = 2; // 147.46KB
+  int64 data_bytes = 3;  // 1.45MB
+  int64 total_bytes = 4; // 42.08MB
+}
+
+message MemoryInfo {
+  int64 total_mem = 1;     // 2.08GB
+  int64 available_mem = 2; // 342.20MB
+  int64 used_mem = 3;      // 1.74GB
+  int64 threshold = 4;     // 226.49MB
+  bool low_memory = 5;     // false
+}
+
+message FileInfo {
+  string name = 1;              // Download
+  int64 size = 2;               // 4.00KB
+  bool readable = 3;            // true
+  bool writable = 4;            // true
+  bool executable = 5;          // true
+  bool dir = 6;                 // true
+  int64 last_modified_time = 7; // 2021-12-05 21:00:52
+  string owner = 8;             // u0_a165
+}
+
+message FileInfoList { repeated FileInfo values = 1; }
+
+message Status {
+  enum CODE {
+    SUCCEED = 0;
+    FAILED = 1;
+  }
+  CODE status = 1;
+  string message = 2;
+}
+
+message ContactInfo {
+  int32 id = 1;
+  string name = 2;
+
+  message PhoneInfo {
+    string type = 1;
+    string number = 2;
+  }
+
+  message EmailInfo {
+    string type = 1;
+    string email = 2;
+  }
+
+  repeated PhoneInfo phones = 3;
+  repeated EmailInfo emails = 4;
+}
+
+message ContactMetaInfo {
+  int32 id = 1;
+  string name = 2;
+  string uri = 3;
+}
+
+message ContactMetaInfoList { repeated ContactMetaInfo values = 1; }
+
+message SmsInfo {
+  int32 id = 1;
+  string address = 2;
+  int64 sent_date = 3;
+  int64 received_date = 4;
+  bool read = 5;
+  string body = 6;
+  bool sent_received = 7;
+}
+
+message SmsInfoList { repeated SmsInfo values = 1; }
+
+message CallLogInfo {
+  int32 id = 1;
+  string number = 2;
+  int32 duration = 3;
+  int64 date = 4;
+  string type = 5;
+}
+
+message CallLogInfoList { repeated CallLogInfo values = 1; }
+
+message CallLogMetaInfo {
+  string number = 1;
+  int64 date = 2;
+}
+
+message CallLogMetaInfoList { repeated CallLogMetaInfo values = 1; }
+
+message MediaStoreInfo {
+  int32 id = 1;
+  string name = 2;
+  int64 size = 3;
+  int64 date_add = 4;
+  int64 date_modify = 5;
+  string uri = 6;
+}
+
+message MediaStoreInfoList { repeated MediaStoreInfo values = 1; }
+
+message MediaType {
+  enum Type {
+    IMAGE = 0;
+    VIDEO = 1;
+    AUDIO = 2;
+    DOWNLOAD = 3;
+  }
+  Type type = 1;
+}
