@@ -1,0 +1,16 @@
+
+http --json POST  http://127.0.0.1:8888/api/pm/all_packages
+http --json POST  http://127.0.0.1:8888/api/pm/all_user_packages
+http --json POST  http://127.0.0.1:8888/api/pm/all_system_packages
+http --json POST  http://127.0.0.1:8888/api/pm/package name=com.android.chrome
+http --json POST  http://127.0.0.1:8888/api/pm/application name=com.android.chrome
+http --json POST  http://127.0.0.1:8888/api/pm/size name=com.android.chrome
+http --json POST  http://127.0.0.1:8888/api/pm/permissions name=com.android.chrome
+http --json POST  http://127.0.0.1:8888/api/pm/activities name=com.android.chrome
+http --json POST  http://127.0.0.1:8888/api/pm/services name=com.android.chrome
+http --json POST  http://127.0.0.1:8888/api/pm/receivers name=com.android.chrome
+http --json POST  http://127.0.0.1:8888/api/pm/providers name=com.android.chrome
+http --json POST  http://127.0.0.1:8888/api/pm/sharedlibs name=com.android.chrome
+http --json POST  http://127.0.0.1:8888/api/pm/icon name=com.android.chrome | cat > logo.jpg
+http --json POST  http://127.0.0.1:8888/api/pm/apk name=com.android.chrome | cat > base.apk
+http --json POST  http://127.0.0.1:8888/api/pm/uninstall name=com.android.chrome

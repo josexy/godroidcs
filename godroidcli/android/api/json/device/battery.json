@@ -1,0 +1,16 @@
+{
+    "code": 100,
+    "data": {
+        "health": "Good",
+        "level": 47,
+        "plugged": "AC",
+        "present": true,
+        "scale": 100,
+        "status": "Charging",
+        "technology": "Li-poly",
+        "temperature": 230,
+        "voltage": 3806
+    },
+    "error": "",
+    "message": "success"
+}

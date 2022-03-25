@@ -1,0 +1,12 @@
+{
+    "code": 100,
+    "data": {
+        "available_mem": "4024397824",
+        "low_memory": false,
+        "threshold": "226492416",
+        "total_mem": "7935111168",
+        "used_mem": "3910713344"
+    },
+    "error": "",
+    "message": "success"
+}

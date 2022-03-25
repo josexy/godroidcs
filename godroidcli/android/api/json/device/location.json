@@ -1,0 +1,15 @@
+{
+    "code": 100,
+    "data": {
+        "address_line": "aaa",
+        "admin_area": "bbb",
+        "country_code": "CN",
+        "country_name": "中国",
+        "latitude": 111.222,
+        "locality": "ccc",
+        "longitude": 333.444,
+        "sub_locality": "ddd"
+    },
+    "error": "",
+    "message": "success"
+}

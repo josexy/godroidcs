@@ -1,0 +1,16 @@
+{
+    "code": 100,
+    "data": {
+        "empty": false,
+        "values": [
+            {
+                "bssid": "54:02:81:5e:8b:2a",
+                "frequency": 5785,
+                "signal": "Excellent",
+                "ssid": "test"
+            }
+        ]
+    },
+    "error": "",
+    "message": "success"
+}

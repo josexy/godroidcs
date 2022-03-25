@@ -1,0 +1,11 @@
+{
+    "code": 100,
+    "data": {
+        "app_bytes": "90800640",
+        "cache_bytes": "37453824",
+        "data_bytes": "654802944",
+        "total_bytes": "783057408"
+    },
+    "error": "",
+    "message": "success"
+}

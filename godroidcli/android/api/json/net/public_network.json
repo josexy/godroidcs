@@ -1,0 +1,15 @@
+{
+    "code": 100,
+    "data": {
+        "city": "Guangzhou",
+        "country": "CN",
+        "hostname": "",
+        "ip": "www.xxx.yyy.zzz",
+        "isp": "AS4538 China Education and Research Network Center",
+        "location": "xxx,yyy",
+        "region": "Guangdong",
+        "timezone": "Asia/Shanghai"
+    },
+    "error": "",
+    "message": "success"
+}

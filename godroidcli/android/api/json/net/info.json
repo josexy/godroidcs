@@ -1,0 +1,335 @@
+{
+    "code": 100,
+    "data": {
+        "values": [
+            {
+                "inet_addrs": [
+                    {
+                        "broadcast_ip": "",
+                        "ip": "fe80::dc34:9bff:fe29:542f%dummy0",
+                        "ipv4": false,
+                        "prefix_length": 64
+                    }
+                ],
+                "mac_address": "DE:34:9B:29:54:2F",
+                "mtu": 1500,
+                "name": "dummy0",
+                "up": true
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "",
+                "mtu": 1480,
+                "name": "ip_vti0",
+                "up": false
+            },
+            {
+                "inet_addrs": [
+                    {
+                        "broadcast_ip": "",
+                        "ip": "::1",
+                        "ipv4": false,
+                        "prefix_length": 128
+                    },
+                    {
+                        "broadcast_ip": "",
+                        "ip": "127.0.0.1",
+                        "ipv4": true,
+                        "prefix_length": 8
+                    }
+                ],
+                "mac_address": "",
+                "mtu": 65536,
+                "name": "lo",
+                "up": true
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:0C",
+                "mtu": 1500,
+                "name": "rmnet6",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:0D",
+                "mtu": 1500,
+                "name": "rmnet7",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:0E",
+                "mtu": 1500,
+                "name": "rmnet8",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:0F",
+                "mtu": 1500,
+                "name": "rmnet9",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:1F",
+                "mtu": 1500,
+                "name": "rmnet_tun10",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:08",
+                "mtu": 1500,
+                "name": "rmnet2",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:09",
+                "mtu": 1500,
+                "name": "rmnet3",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:18",
+                "mtu": 1500,
+                "name": "rmnet_r_ims10",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:0A",
+                "mtu": 1500,
+                "name": "rmnet4",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:19",
+                "mtu": 1500,
+                "name": "rmnet_r_ims11",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:0B",
+                "mtu": 1500,
+                "name": "rmnet5",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:23",
+                "mtu": 1500,
+                "name": "rmnet_tun14",
+                "up": false
+            },
+            {
+                "inet_addrs": [
+                    {
+                        "broadcast_ip": "",
+                        "ip": "fe80::9f6d:53c:23f5:a1db%wlan0",
+                        "ipv4": false,
+                        "prefix_length": 64
+                    },
+                    {
+                        "broadcast_ip": "192.168.1.255",
+                        "ip": "192.168.1.161",
+                        "ipv4": true,
+                        "prefix_length": 24
+                    }
+                ],
+                "mac_address": "02:1C:62:F6:98:B3",
+                "mtu": 1500,
+                "name": "wlan0",
+                "up": true
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:22",
+                "mtu": 1500,
+                "name": "rmnet_tun13",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "",
+                "mtu": 1452,
+                "name": "ip6tnl0",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:21",
+                "mtu": 1500,
+                "name": "rmnet_tun12",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:06",
+                "mtu": 1400,
+                "name": "rmnet0",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:20",
+                "mtu": 1500,
+                "name": "rmnet_tun11",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:07",
+                "mtu": 1500,
+                "name": "rmnet1",
+                "up": false
+            },
+            {
+                "inet_addrs": [
+                    {
+                        "broadcast_ip": "",
+                        "ip": "fe80::5a02:3ff:fe04:512%rmnet_ims00",
+                        "ipv4": false,
+                        "prefix_length": 64
+                    },
+                    {
+                        "broadcast_ip": "",
+                        "ip": "2409:8154:c4c:4d4f:aac4:3922:3a9d:e58f",
+                        "ipv4": false,
+                        "prefix_length": 64
+                    }
+                ],
+                "mac_address": "58:02:03:04:05:12",
+                "mtu": 1280,
+                "name": "rmnet_ims00",
+                "up": true
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "",
+                "mtu": 1500,
+                "name": "ip6_vti0",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:10",
+                "mtu": 1500,
+                "name": "rmnet10",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:11",
+                "mtu": 1500,
+                "name": "rmnet11",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "",
+                "mtu": 1480,
+                "name": "sit0",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:17",
+                "mtu": 1500,
+                "name": "rmnet_r_ims01",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:16",
+                "mtu": 1500,
+                "name": "rmnet_r_ims00",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:1D",
+                "mtu": 1500,
+                "name": "rmnet_tun03",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "3A:1E:9C:67:1E:A9",
+                "mtu": 1500,
+                "name": "p2p0",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:1C",
+                "mtu": 1500,
+                "name": "rmnet_tun02",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "",
+                "mtu": 1500,
+                "name": "Hisilicon0",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:1B",
+                "mtu": 1500,
+                "name": "rmnet_tun01",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:1A",
+                "mtu": 1500,
+                "name": "rmnet_tun00",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:13",
+                "mtu": 1500,
+                "name": "rmnet_ims10",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:1E",
+                "mtu": 1500,
+                "name": "rmnet_tun04",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "00:11:09:64:04:01",
+                "mtu": 1500,
+                "name": "CPU0",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:14",
+                "mtu": 1500,
+                "name": "rmnet_emc0",
+                "up": false
+            },
+            {
+                "inet_addrs": [],
+                "mac_address": "58:02:03:04:05:15",
+                "mtu": 1500,
+                "name": "rmnet_emc1",
+                "up": false
+            }
+        ]
+    },
+    "error": "",
+    "message": "success"
+}

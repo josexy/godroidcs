@@ -1,0 +1,2 @@
+http --json POST http://127.0.0.1:8888/api/phone/dial number="111111"
+http --json POST http://127.0.0.1:8888/api/phone/call number="111111"

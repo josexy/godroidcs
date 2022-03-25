@@ -1,0 +1,19 @@
+{
+    "code": 100,
+    "data": {
+        "values": [
+            {
+                "id": 1,
+                "name": "XXX",
+                "uri": "content://com.android.contacts/contacts/lookup/1885r1-51D2"
+            },
+            {
+                "id": 2,
+                "name": "YYY",
+                "uri": "content://com.android.contacts/contacts/lookup/1885r5-5F086261.663r15-5F086261"
+            }
+        ]
+    },
+    "error": "",
+    "message": "success"
+}

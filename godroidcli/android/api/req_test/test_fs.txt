@@ -1,0 +1,13 @@
+
+http --json POST http://127.0.0.1:8888/api/fs/file_tree path=/storage/emulated/0/Download id=tree
+http --json POST http://127.0.0.1:8888/api/fs/list path=/storage/emulated/0/Download
+http --json POST http://127.0.0.1:8888/api/fs/create path=/storage/emulated/0/Download/test
+http --json POST http://127.0.0.1:8888/api/fs/mkdir path=/storage/emulated/0/Download/test
+http --json POST http://127.0.0.1:8888/api/fs/rmdir path=/storage/emulated/0/Download/test
+http --json POST http://127.0.0.1:8888/api/fs/move src=/storage/emulated/0/Download/test src=/storage/emulated/0/Download/test2
+http --json POST http://127.0.0.1:8888/api/fs/rename src=/storage/emulated/0/Download/test src=/storage/emulated/0/Download/test2
+http --json POST http://127.0.0.1:8888/api/fs/copy src=/storage/emulated/0/Download/test src=/storage/emulated/0/Download/test2
+http --json POST http://127.0.0.1:8888/api/fs/write path=/storage/emulated/0/Download/test text="hello world"
+http --json POST http://127.0.0.1:8888/api/fs/append path=/storage/emulated/0/Download/test text="hello world"
+http --json POST http://127.0.0.1:8888/api/fs/read path=/storage/emulated/0/Download/test
+http --json POST http://127.0.0.1:8888/api/fs/download path=/storage/emulated/0/Download/test.pdf

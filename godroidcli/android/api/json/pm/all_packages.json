@@ -1,0 +1,21 @@
+{
+    "code": 100,
+    "data": {
+        "values": [
+            {
+                "app_name": "时钟",
+                "package_name": "com.huawei.deskclock",
+                "system_app": true,
+                "version_name": "11.1.0.620"
+            },
+            {
+                "app_name": "服务中心",
+                "package_name": "com.huawei.ohos.famanager",
+                "system_app": true,
+                "version_name": "13.0.0.602"
+            }
+        ]
+    },
+    "error": "",
+    "message": "success"
+}

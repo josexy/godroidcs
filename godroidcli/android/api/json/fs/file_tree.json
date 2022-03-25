@@ -1,0 +1,78 @@
+{
+    "code": 100,
+    "data": {
+        "children": [
+            {
+                "children": null,
+                "data": "/storage/emulated/0/Android/data",
+                "id": "tree_0_0",
+                "parentId": "tree_0",
+                "text": "data",
+                "type": "folder"
+            },
+            {
+                "children": null,
+                "data": "/storage/emulated/0/Android/obb",
+                "id": "tree_0_1",
+                "parentId": "tree_0",
+                "text": "obb",
+                "type": "folder"
+            },
+            {
+                "children": null,
+                "data": "/storage/emulated/0/Android/media",
+                "id": "tree_0_2",
+                "parentId": "tree_0",
+                "text": "media",
+                "type": "folder"
+            },
+            {
+                "children": null,
+                "data": "/storage/emulated/0/Android/24ea15",
+                "id": "tree_0_3",
+                "parentId": "tree_0",
+                "text": "24ea15",
+                "type": "file"
+            },
+            {
+                "children": null,
+                "data": "/storage/emulated/0/Android/aa3dcb",
+                "id": "tree_0_4",
+                "parentId": "tree_0",
+                "text": "aa3dcb",
+                "type": "file"
+            },
+            {
+                "children": null,
+                "data": "/storage/emulated/0/Android/obj",
+                "id": "tree_0_5",
+                "parentId": "tree_0",
+                "text": "obj",
+                "type": "folder"
+            },
+            {
+                "children": null,
+                "data": "/storage/emulated/0/Android/com",
+                "id": "tree_0_6",
+                "parentId": "tree_0",
+                "text": "com",
+                "type": "folder"
+            },
+            {
+                "children": null,
+                "data": "/storage/emulated/0/Android/ANDROID.PERMISSION.TEST",
+                "id": "tree_0_8",
+                "parentId": "tree_0",
+                "text": "ANDROID.PERMISSION.TEST",
+                "type": "file"
+            }
+        ],
+        "data": "/storage/emulated/0/Android",
+        "id": "tree_0",
+        "parentId": "tree",
+        "text": "Android",
+        "type": "folder"
+    },
+    "error": "",
+    "message": "success"
+}

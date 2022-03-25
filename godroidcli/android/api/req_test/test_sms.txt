@@ -1,0 +1,3 @@
+http --json POST http://127.0.0.1:8888/api/sms/all
+http --json POST http://127.0.0.1:8888/api/sms/get number=10086
+http --json POST http://127.0.0.1:8888/api/sms/send number=10086 message=CXLL

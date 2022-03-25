@@ -1,0 +1,15 @@
+{
+    "code": 100,
+    "data": {
+        "values": [
+            "org.chromium.chrome.browser.util.ChromeFileProvider",
+            "org.chromium.chrome.browser.download.DownloadFileProvider",
+            "org.chromium.chrome.browser.provider.ChromeBrowserProvider",
+            "org.chromium.chrome.browser.attribution_reporting.AttributionReportingProvider",
+            "com.google.android.apps.chrome.autofill.AutofillDataProvider",
+            "com.google.android.apps.chrome.icing.IcingProvider"
+        ]
+    },
+    "error": "",
+    "message": "success"
+}

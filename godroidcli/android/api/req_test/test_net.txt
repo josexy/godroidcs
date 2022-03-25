@@ -1,0 +1,7 @@
+http --json POST http://127.0.0.1:8888/api/net/info
+http --json POST http://127.0.0.1:8888/api/net/wifi
+http --json POST http://127.0.0.1:8888/api/net/connectivity
+http --json POST http://127.0.0.1:8888/api/net/active_network
+http --json POST http://127.0.0.1:8888/api/net/public_network
+http --json POST http://127.0.0.1:8888/api/net/scan_wifi
+

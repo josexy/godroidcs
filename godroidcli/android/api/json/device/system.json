@@ -1,0 +1,19 @@
+{
+    "code": 100,
+    "data": {
+        "abi": "arm64-v8a",
+        "display": "CDY-AN20 2.0.0.221(C00E210R6P6)",
+        "host": "cn-central-hcd-2a-8c1f026d41643102084224-68c7f4b776-pw4fn",
+        "kernel_release": "4.14.116",
+        "kernel_version": "#1 SMP PREEMPT Tue Jan 25 19:15:39 CST 2022",
+        "language": "zh",
+        "mcc": 460,
+        "mnc": 65535,
+        "release_version": "10",
+        "sdk": 29,
+        "uptime": "367988465",
+        "user": "test"
+    },
+    "error": "",
+    "message": "success"
+}

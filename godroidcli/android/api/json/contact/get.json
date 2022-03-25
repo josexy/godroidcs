@@ -1,0 +1,16 @@
+{
+    "code": 100,
+    "data": {
+        "emails": [],
+        "id": 1,
+        "name": "XXX",
+        "phones": [
+            {
+                "number": "YYY",
+                "type": "Mobile"
+            }
+        ]
+    },
+    "error": "",
+    "message": "success"
+}

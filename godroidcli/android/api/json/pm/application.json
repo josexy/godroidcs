@@ -1,0 +1,14 @@
+{
+    "code": 100,
+    "data": {
+        "app_name": "Chrome",
+        "data_dir": "/data/user/0/com.android.chrome",
+        "min_sdk_version": 29,
+        "process_name": "com.android.chrome",
+        "source_dir": "/data/app/com.android.chrome-hMe8rh3sBpo6cOSLt71b8w==/base.apk",
+        "system_app": false,
+        "target_sdk_version": 31
+    },
+    "error": "",
+    "message": "success"
+}

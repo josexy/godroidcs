@@ -1,0 +1,24 @@
+{
+    "code": 100,
+    "data": {
+        "adb": true,
+        "airplane": false,
+        "android_id": "39ade620fd54e458",
+        "bluetooth": false,
+        "board": "CDY",
+        "brand": "HUAWEI",
+        "build_time": "1643111846000",
+        "developer": true,
+        "device_name": "HWCDY",
+        "fingerprint": "HUAWEI/CDY-AN20/HWCDY:10/HUAWEICDY-AN20/102.0.0.221C00:user/release-keys",
+        "hardware": "kirin820",
+        "location": true,
+        "manufacturer": "HUAWEI",
+        "model": "CDY-AN20",
+        "product": "CDY-AN20",
+        "root": false,
+        "sim_card": true
+    },
+    "error": "",
+    "message": "success"
+}

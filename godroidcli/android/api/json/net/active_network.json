@@ -1,0 +1,19 @@
+{
+    "code": 100,
+    "data": {
+        "values": [
+            {
+                "dns": "192.168.1.1",
+                "has_network": true,
+                "ip": "192.168.1.161",
+                "mtu": 0,
+                "name": "wlan0",
+                "proxy": null,
+                "signal": "Excellent",
+                "type": "WIFI"
+            }
+        ]
+    },
+    "error": "",
+    "message": "success"
+}

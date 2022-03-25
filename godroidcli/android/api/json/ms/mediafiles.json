@@ -1,0 +1,25 @@
+{
+    "code": 100,
+    "data": {
+        "values": [
+            {
+                "date_add": "0",
+                "date_modify": "1627275355",
+                "id": 399,
+                "name": "Browser",
+                "size": "0",
+                "uri": "content://media/external/downloads/399"
+            },
+            {
+                "date_add": "1630295634",
+                "date_modify": "1630295634",
+                "id": 2189,
+                "name": "test.jpg",
+                "size": "36328",
+                "uri": "content://media/external/downloads/2189"
+            }
+        ]
+    },
+    "error": "",
+    "message": "success"
+}

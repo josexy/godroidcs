@@ -1,0 +1,27 @@
+{
+    "code": 100,
+    "data": {
+        "values": [
+            {
+                "address": "10086",
+                "body": "XXX",
+                "id": 2,
+                "read": false,
+                "received_date": "1628758410974",
+                "sent_date": "1628758364000",
+                "sent_received": false
+            },
+            {
+                "address": "10086",
+                "body": "CXLL",
+                "id": 802,
+                "read": false,
+                "received_date": "1647747973043",
+                "sent_date": "0",
+                "sent_received": true
+            }
+        ]
+    },
+    "error": "",
+    "message": "success"
+}

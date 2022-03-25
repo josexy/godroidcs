@@ -1,0 +1,39 @@
+{
+    "code": 100,
+    "data": {
+        "values": [
+            {
+                "dir": true,
+                "executable": true,
+                "last_modified_time": "1627377528000",
+                "name": "/storage/emulated/0/Download/Browser",
+                "owner": "root",
+                "readable": true,
+                "size": "3488",
+                "writable": true
+            },
+            {
+                "dir": false,
+                "executable": false,
+                "last_modified_time": "1630295634000",
+                "name": "/storage/emulated/0/Download/44434e2e91_edit_36308019579876.jpg",
+                "owner": "root",
+                "readable": true,
+                "size": "36328",
+                "writable": true
+            },
+            {
+                "dir": false,
+                "executable": false,
+                "last_modified_time": "1648137712000",
+                "name": "/storage/emulated/0/Download/helloworld",
+                "owner": "root",
+                "readable": true,
+                "size": "0",
+                "writable": true
+            }
+        ]
+    },
+    "error": "",
+    "message": "success"
+}

@@ -1,0 +1,21 @@
+{
+    "code": 100,
+    "data": {
+        "application_info": {
+            "app_name": "Chrome",
+            "data_dir": "/data/user/0/com.android.chrome",
+            "min_sdk_version": 29,
+            "process_name": "com.android.chrome",
+            "source_dir": "/data/app/com.android.chrome-hMe8rh3sBpo6cOSLt71b8w==/base.apk",
+            "system_app": false,
+            "target_sdk_version": 31
+        },
+        "first_install_time": "1627276950175",
+        "installer": "com.android.vending",
+        "last_updated_time": "1646623992028",
+        "package_name": "com.android.chrome",
+        "version_name": "99.0.4844.58"
+    },
+    "error": "",
+    "message": "success"
+}

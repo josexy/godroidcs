@@ -1,0 +1,9 @@
+{
+    "code": 100,
+    "data": {
+        "message": "hello world",
+        "status": "SUCCEED"
+    },
+    "error": "",
+    "message": "success"
+}

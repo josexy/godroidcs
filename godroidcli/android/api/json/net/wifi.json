@@ -1,0 +1,23 @@
+{
+    "code": 100,
+    "data": {
+        "bssid": "54:02:81:5e:8b:2a",
+        "dns1": "192.168.1.1",
+        "dns2": "0.0.0.0",
+        "frequency": 5785,
+        "gateway": "192.168.1.1",
+        "ip": "192.168.1.161",
+        "link_speed": 390,
+        "mac": "02:00:00:00:00:00",
+        "netmask": "255.255.255.0",
+        "network_id": 9,
+        "rx_speed": 433,
+        "server_address": "192.168.1.1",
+        "signal": "Excellent",
+        "ssid": "test",
+        "status": "Enabled",
+        "tx_speed": 390
+    },
+    "error": "",
+    "message": "success"
+}

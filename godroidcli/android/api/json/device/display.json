@@ -1,0 +1,20 @@
+{
+    "code": 100,
+    "data": {
+        "density": 3,
+        "density_dpi": 480,
+        "font_scale": 1,
+        "hdr_capabilities": "HDR10,HLG",
+        "height": 2292,
+        "orientation": "Portrait",
+        "refresh_rate": 60.000004,
+        "screen_brightness": 11,
+        "screen_brightness_mode": "Manual",
+        "screen_off_time": 120000,
+        "support_hdr": true,
+        "touch_screen": true,
+        "width": 1080
+    },
+    "error": "",
+    "message": "success"
+}

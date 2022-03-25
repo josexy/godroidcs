@@ -1,0 +1,10 @@
+{
+    "code": 100,
+    "data": {
+        "free_size": "54199005184",
+        "total_size": "128000000000",
+        "used_size": "73800994816"
+    },
+    "error": "",
+    "message": "success"
+}

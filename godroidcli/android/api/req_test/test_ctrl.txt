@@ -1,0 +1,9 @@
+http --json POST http://127.0.0.1:8888/api/ctrl/get_brightness
+http --json POST http://127.0.0.1:8888/api/ctrl/set_brightness value=20
+
+http --json POST http://127.0.0.1:8888/api/ctrl/get_brightness_mode
+http --json POST http://127.0.0.1:8888/api/ctrl/set_brightness_mode mode=auto
+
+http --json POST http://127.0.0.1:8888/api/ctrl/get_clipboard
+http --json POST http://127.0.0.1:8888/api/ctrl/set_clipboard text="hello world"
+

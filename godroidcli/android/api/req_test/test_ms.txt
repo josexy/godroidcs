@@ -1,0 +1,9 @@
+http --json POST http://127.0.0.1:8888/api/ms/mediafiles type=image
+http --json POST http://127.0.0.1:8888/api/ms/mediafiles type=video
+http --json POST http://127.0.0.1:8888/api/ms/mediafiles type=audio
+http --json POST http://127.0.0.1:8888/api/ms/mediafiles type=download
+
+http --json POST http://127.0.0.1:8888/api/ms/thumbnail uri="content://media/external/images/media/16914" > tmp.jpg
+http --json POST http://127.0.0.1:8888/api/ms/download uri="content://media/external/images/media/16914" > tmp.jpg
+
+http --json POST http://127.0.0.1:8888/api/ms/delete uri="content://media/external/downloads/2222"

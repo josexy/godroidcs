@@ -1,0 +1,10 @@
+{
+    "code": 100,
+    "data": {
+        "renderer": "Mali-G57",
+        "vendor": "ARM",
+        "version": "OpenGL ES-CM 1.1 v1.r21p0-01rel0.71f38938bf020f9e4ef2f7cf98febe2b"
+    },
+    "error": "",
+    "message": "success"
+}
