@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package protobuf;
+option go_package = "./protobuf";
+import "Message.proto";
+
+option java_multiple_files = true;
+option java_package = "com.joxrays.godroidsvr.resolver";
+option java_outer_classname = "NetResolverEntry";
+
+service NetResolver {
+  rpc GetNetworkInfo(Empty) returns (NetInterfaceInfoList) {}
+  rpc GetCurrentWifiInfo(Empty) returns (DetailWifiInfo) {}
+  rpc ScanWifiResult(Empty) returns (ScanWifiInfoList) {}
+  rpc CheckNetworkConnectivity(Empty) returns (Boolean) {}
+  rpc GetActiveNetworkInfo(Empty) returns (DetailActiveNetworkInfoList) {}
+  rpc GetPublicNetworkInfo(Empty) returns (PublicNetworkInfo) {}
+}
+

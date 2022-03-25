@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package protobuf;
+option go_package = "./protobuf";
+import "Message.proto";
+
+option java_multiple_files = true;
+option java_package = "com.joxrays.godroidsvr.resolver";
+option java_outer_classname = "ContactResolverEntry";
+
+service ContactResolver {
+  rpc GetAllContactInfo(Empty) returns (ContactMetaInfoList) {}
+  rpc GetContactInfo(String) returns (ContactInfo) {}
+  rpc DeleteContact(String) returns (Empty) {}
+  rpc AddContact(ContactInfo) returns (Empty) {}
+}
