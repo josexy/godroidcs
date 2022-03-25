@@ -1,0 +1,89 @@
+plugins {
+    id 'com.android.application'
+    id "com.google.protobuf" version "0.8.17"
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.joxrays.godroidsvr"
+        minSdk 29
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            // 定义proto文件目录
+            proto {
+                //srcDir 'src/main/proto'
+            }
+            java {
+                // srcDir 'src/main/java'
+            }
+        }
+    }
+}
+
+dependencies {
+    def work_version = "2.7.0"
+    implementation "androidx.work:work-runtime:$work_version"
+
+    implementation 'io.grpc:grpc-netty-shaded:1.41.0'
+    // implementation 'io.grpc:grpc-protobuf:1.41.0'
+    // implementation 'io.grpc:grpc-okhttp:1.41.0'
+    implementation 'io.grpc:grpc-protobuf-lite:1.41.0'
+    implementation 'io.grpc:grpc-stub:1.41.0'
+    compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
+
+    implementation 'org.java-websocket:Java-WebSocket:1.5.2'
+
+    implementation 'com.google.protobuf:protobuf-javalite:3.17.3'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation "com.android.support:support-annotations:28.0.0"
+    implementation 'com.google.code.gson:gson:2.8.8'
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
+
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.17.3'
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.41.0:osx-x86_64'
+        }
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                java {
+                    option "lite"
+                }
+            }
+            task.plugins {
+                grpc { option 'lite' }
+            }
+        }
+    }
+}
