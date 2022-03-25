@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GoDroidSvr</string>
+    <string name="rpc_server_port">Server Port</string>
+    <string name="rpc_server_default_port">9999</string>
+    <string name="start_rpc_server">Start Server</string>
+    <string name="exit_app">Exit</string>
+    <string name="main_channel_id">12345</string>
+    <string name="media_projection_channel_id">67890</string>
+    <string name="notification_content_text1">Click to enter app</string>
+    <string name="notification_content_text2">Media Projection</string>
+</resources>
