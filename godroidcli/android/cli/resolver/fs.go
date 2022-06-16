@@ -19,6 +19,7 @@ import (
 	"io"
 	"io/fs"
 	"os"
+	"path"
 	"path/filepath"
 	"strings"
 
@@ -83,14 +84,14 @@ func (f *FileSystem) SetContext(ctx *ResolverContext) {
 	f.ResolverContext = ctx
 }
 
-func (f *FileSystem) concat(path string) string {
-	if path == "" {
-		return path
+func (f *FileSystem) concat(spath string) string {
+	if spath == "" {
+		return spath
 	}
-	if f.remoteDir != "" && path[0] != '/' {
-		path = filepath.Join(f.remoteDir, path)
+	if f.remoteDir != "" && spath[0] != '/' {
+		spath = path.Join(f.remoteDir, spath)
 	}
-	return path
+	return spath
 }
 
 // DownloadFile download file from Android device and redirect the bytes stream to io.Writer
