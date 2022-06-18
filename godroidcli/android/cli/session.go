@@ -105,6 +105,11 @@ func (s *Session) addResolver(ctx context.Context, name string, r resolver.Resol
 	if s.resolvers == nil {
 		s.resolvers = make(map[string]*resolver.ResolverContext)
 	}
+
+	// save websocket server address into context
+	ctx = context.WithValue(ctx, resolver.ServerAddrContextKey,
+		fmt.Sprintf("%s:%d", s.address, s.port+1))
+
 	// attach current session to all resolvers
 	rc := resolver.NewResolverContext(ctx, r, s, cmd)
 	r.SetContext(rc)

@@ -7,6 +7,8 @@ require (
 	github.com/fatih/color v1.13.0
 	github.com/gin-contrib/cors v1.3.1
 	github.com/gin-gonic/gin v1.7.7
+	github.com/gorilla/websocket v1.5.0
+	github.com/veandco/go-sdl2 v0.4.24
 	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211
 	google.golang.org/grpc v1.45.0
 	google.golang.org/protobuf v1.27.1

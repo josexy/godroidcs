@@ -495,15 +495,25 @@ func (con *Console) assertForwardExist(sn string, port int) bool {
 	return true
 }
 
+func (con *Console) clearForwardRules() {
+	forwards := con.adb.GetAllForwards()
+	for _, forward := range forwards {
+		con.adb.RemoveForward(forward.SerialNumber, forward.LocalPort)
+	}
+}
+
 // > exit quit program gracefully
 func (con *Console) exit(filter.Param) {
 	_ = con.instance.Close()
 	con.wg.Add(1)
 	con.gracefulExit()
-
-	util.Info("Bye! Have fun! :)")
 	// wait for all child goroutines to exit gracefully
 	con.wg.Wait()
+
+	// clear forward rules
+	con.clearForwardRules()
+
+	util.Info("Bye! Have fun! :)")
 	os.Exit(0)
 }
 
@@ -743,6 +753,10 @@ func (con *Console) NewSessionBy(name string, port int, device_address bool) err
 		// mirror rpc server port
 		local := con.randomGenLocalPort()
 		if err := con.newDeviceForward(name, local, port); err != nil {
+			return err
+		}
+		// add forward rule for websocket if using adb
+		if err = con.newDeviceForward(name, local+1, port+1); err != nil {
 			return err
 		}
 		err = con.newSession(name, "", local)

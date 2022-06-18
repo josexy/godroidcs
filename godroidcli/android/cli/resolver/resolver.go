@@ -21,6 +21,12 @@ import (
 	"github.com/josexy/godroidcli/status"
 )
 
+var ServerAddrContextKey = &contextKey{"server-addr"}
+
+type contextKey struct {
+	name string
+}
+
 type CommandHelpInfo struct {
 	Name  string
 	Usage string

@@ -100,12 +100,13 @@ const (
 )
 
 const (
-	ScreenCord = "screencord"
-	Reboot     = "reboot"
-	Input      = "input"
-	Brightness = "brightness"
-	Clipboard  = "clipboard"
-	Volume     = "volume"
+	ScreenCord    = "screencord"
+	ScreenCapture = "screencapture"
+	Reboot        = "reboot"
+	Input         = "input"
+	Brightness    = "brightness"
+	Clipboard     = "clipboard"
+	Volume        = "volume"
 )
 
 const (

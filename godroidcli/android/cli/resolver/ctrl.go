@@ -20,6 +20,8 @@ import (
 	"time"
 
 	"github.com/josexy/godroidcli/android/internal"
+	"github.com/josexy/godroidcli/android/window"
+	"github.com/josexy/godroidcli/android/ws"
 	"github.com/josexy/godroidcli/filter"
 	pb "github.com/josexy/godroidcli/protobuf"
 	"github.com/josexy/godroidcli/util"
@@ -28,6 +30,7 @@ import (
 
 var CtrlHelpList = []CommandHelpInfo{
 	{internal.ScreenCord, "record the screen and save it in mp4 format"},
+	{internal.ScreenCapture, "capture the screen"},
 	{internal.Reboot, "reboot the device via adb"},
 	{internal.Input, "input command via adb"},
 	{internal.Brightness, "display or set the brightness of device"},
@@ -104,6 +107,59 @@ func (c *Controller) ScreenRecord(local string) {
 		fs.DownloadGeneralFile(s.Value, local)
 		util.Info("delete the video file on Android device")
 		fs.DeleteFile(s.Value)
+	}
+}
+
+// ScreenCapture screen capture
+func (c *Controller) ScreenCapture() {
+
+	util.Info("start media projection...")
+	util.Info("now you may need to go back to the device to grant permissions")
+	c.Error = c.StartScreenCapture()
+	if util.AssertErrorNotNil(c.Error) {
+		return
+	}
+
+	util.Warn("Ctrl+C to continue when grant permissions completely")
+	<-util.MakeInterruptChan()
+
+	addr := c.ctx.Value(ServerAddrContextKey).(string)
+
+	// connect to websocket server
+	wsClient := ws.NewWsScreenCaptureClient(addr)
+	if err := wsClient.Start(); err != nil {
+		util.ErrorBy(err)
+		c.StopScreenCapture()
+		return
+	}
+
+	device := c.GetResolver("device").(*Device)
+	var di *pb.DisplayInfo
+	di, c.Error = device.GetDisplayInfo()
+	if util.AssertErrorNotNil(c.Error) {
+		return
+	}
+
+	util.Info("device screen size: %dx%d", di.Width, di.Height)
+
+	w, err := window.NewWindow("Screen Capture",
+		window.Rect{Width: int(di.Width), Height: int(di.Height)})
+	if util.AssertErrorNotNil(err) {
+		return
+	}
+
+	// add message observer
+	wsClient.AddObserver(w)
+
+	w.Run()
+	wsClient.Close()
+	w.Destroy()
+
+	util.Warn("stop media projection...")
+
+	c.Error = c.StopScreenCapture()
+	if util.AssertErrorNotNil(c.Error) {
+		return
 	}
 }
 
@@ -297,6 +353,7 @@ func (c *Controller) dumpVolume(args ...string) {
 
 // Run
 // > ctrl screencord ./example.mp4
+// > ctrl screencapture
 // > ctrl input
 // > ctrl reboot
 // > ctrl brightness [100]
@@ -308,6 +365,8 @@ func (c *Controller) Run(param filter.Param) bool {
 	switch param.Args[0] {
 	case internal.ScreenCord:
 		c.ScreenRecord(util.Trim(param.Args[1]))
+	case internal.ScreenCapture:
+		c.ScreenCapture()
 	case internal.Input:
 		c.ProcessInputCommand(param.Args[1:]...)
 	case internal.Reboot:
