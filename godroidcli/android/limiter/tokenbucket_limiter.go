@@ -12,21 +12,26 @@
 // License for the specific language governing permissions and limitations
 // under the License.
 
-package ws
+package limiter
 
 import (
-	"testing"
-	"time"
+	"golang.org/x/time/rate"
 )
 
-func TestSimpleLimiter(t *testing.T) {
-	limiter := NewSimpleLimiter(10, time.Millisecond*50)
-	for i := 0; i < 100; i++ {
-		if limiter.Allow() {
-			t.Log("ok")
-		} else {
-			t.Log("fail")
-		}
-		time.Sleep(time.Millisecond)
+type TokenBucketLimiter struct {
+	limiter *rate.Limiter
+}
+
+func NewTokenBucketLimiter(bucketCapacity, newTokenRate int) *TokenBucketLimiter {
+	return &TokenBucketLimiter{
+		limiter: rate.NewLimiter(rate.Limit(newTokenRate), bucketCapacity),
 	}
+}
+
+func (limiter *TokenBucketLimiter) Allow() bool {
+	return limiter.limiter.Allow()
+}
+
+func (limiter *TokenBucketLimiter) Done() {
+
 }

@@ -12,9 +12,33 @@
 // License for the specific language governing permissions and limitations
 // under the License.
 
-package ws
+package limiter
 
-type Limiter interface {
-	Allow() bool
-	Done()
+import (
+	"testing"
+	"time"
+)
+
+func TestSimpleLimiter(t *testing.T) {
+	limiter := NewSimpleLimiter(10, time.Millisecond*50)
+	for i := 0; i < 100; i++ {
+		if limiter.Allow() {
+			t.Log("ok")
+		} else {
+			t.Log("fail")
+		}
+		time.Sleep(time.Millisecond)
+	}
+}
+
+func TestTokenBucketLimiter(t *testing.T) {
+	limiter := NewTokenBucketLimiter(30, 15)
+	for i := 0; i < 100; i++ {
+		if limiter.Allow() {
+			t.Log("ok")
+		} else {
+			t.Log("fail")
+		}
+		time.Sleep(time.Millisecond)
+	}
 }
