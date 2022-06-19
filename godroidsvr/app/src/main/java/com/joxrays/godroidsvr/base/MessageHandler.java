@@ -21,19 +21,30 @@ import android.os.Message;
 
 import androidx.annotation.NonNull;
 
+import com.joxrays.godroidsvr.limiter.Limiter;
+import com.joxrays.godroidsvr.limiter.SimpleLimiter;
+import com.joxrays.godroidsvr.limiter.TokenBucketLimiter;
 import com.joxrays.godroidsvr.singleton.WsServerSingleton;
 import com.joxrays.godroidsvr.util.BitmapUtil;
 
 import java.io.ByteArrayOutputStream;
 
 public class MessageHandler extends Handler {
+    private final Limiter limiter;
 
     public MessageHandler(@NonNull Looper looper) {
         super(looper);
+        // limiter = new SimpleLimiter(30, 1000);
+        limiter = new TokenBucketLimiter(30, 15);
     }
 
     @Override
     public void handleMessage(Message msg) {
+
+        if (!limiter.allow()) {
+            return;
+        }
+
         super.handleMessage(msg);
         Bitmap bitmap = (Bitmap) msg.obj;
         ByteArrayOutputStream out = new ByteArrayOutputStream(9102);
