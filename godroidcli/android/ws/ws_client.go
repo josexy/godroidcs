@@ -70,7 +70,6 @@ func (client *ScreenCaptureClient) Start() error {
 
 			// rate limit
 			if !client.limiter.Allow() {
-				util.Info("disallow")
 				continue
 			}
 
