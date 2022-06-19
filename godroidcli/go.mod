@@ -1,6 +1,6 @@
 module github.com/josexy/godroidcli
 
-go 1.17
+go 1.18
 
 require (
 	github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e
@@ -10,6 +10,7 @@ require (
 	github.com/gorilla/websocket v1.5.0
 	github.com/veandco/go-sdl2 v0.4.24
 	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211
+	golang.org/x/time v0.0.0-20220609170525-579cf78fd858
 	google.golang.org/grpc v1.45.0
 	google.golang.org/protobuf v1.27.1
 )

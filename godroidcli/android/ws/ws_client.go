@@ -19,9 +19,9 @@ import (
 	"image"
 	"image/jpeg"
 	"net/url"
-	"time"
 
 	"github.com/gorilla/websocket"
+	"github.com/josexy/godroidcli/android/limiter"
 	"github.com/josexy/godroidcli/android/observer"
 	"github.com/josexy/godroidcli/util"
 )
@@ -31,15 +31,16 @@ type ScreenCaptureClient struct {
 	conn         *websocket.Conn
 	msgObservers []observer.MessageObserver
 	imgChan      chan image.Image
-	limiter      Limiter
+	limiter      limiter.Limiter
 	closeChan    chan struct{}
 }
 
 func NewWsScreenCaptureClient(addr string) *ScreenCaptureClient {
 	return &ScreenCaptureClient{
-		addr:      addr,
-		imgChan:   make(chan image.Image, 1024),
-		limiter:   NewSimpleLimiter(30, time.Second),
+		addr:    addr,
+		imgChan: make(chan image.Image, 1024),
+		// limiter: limiter.NewSimpleLimiter(30, time.Second),
+		limiter:   limiter.NewTokenBucketLimiter(30, 15),
 		closeChan: make(chan struct{}),
 	}
 }
@@ -69,6 +70,7 @@ func (client *ScreenCaptureClient) Start() error {
 
 			// rate limit
 			if !client.limiter.Allow() {
+				util.Info("disallow")
 				continue
 			}
 
